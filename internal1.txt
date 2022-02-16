@@ -3,3 +3,6 @@ and maybe I add some new text, and even newer text
 okay, maybe we're ready to publish something
 okay, we've thrown the first tag down, now we're really doing something.
 Okay, this is looking good!  ready to publish now
+So after 1.1 we modify some more files.
+intermediate--here, I'm doing some  changes--hoping NOT TO SEE THIS COMMIT ON PUBLISH
+okay, I think I'm ready to do another publish now
