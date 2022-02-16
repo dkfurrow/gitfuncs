@@ -1,0 +1,30 @@
+git rm -r --cached file_to_remove.txt
+then commit
+file to remove is still in working tree, but 'untracked now'
+can do the same for folder, recursively:
+git rm -r --cached <folder>
+That thread is here:
+https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitign
+****
+
+**Merge Squash, to remove interim commits
+https://docs.syntevo.com/SmartGit/HowTos/How-to-perform-squash-merges.html
+In SmartGit, squash merges can be performed either from the main window or from the log window. In both cases, you first have to make sure you’ve checked out the branch onto which you want to apply the merge commit.
+
+From the main window: In the main menu, select Branch|Merge. On the Merge dialog that shows up, first select the topmost commit (i.e. the newest) from the ones you want to want to squash merge into the current branch. Second, make sure the option Branch consisting of selected commit and its ancestors is selected. Then click on the Merge button.
+From the log window: On the Commits view, right-click on the topmost commit from the ones to squash merge into the current branch. In the context menu, click on Merge. On the confirmation dialog that shows up, select the Merge to Working Tree option.
+Regardless of whether you merged from the main window or the log window, your working tree is now in a merging state. If there are any conflicts, you’ll have to resolve them before you can proceed. Resolving conflicts is covered in another How-To: How to resolve conflicts.
+
+If there weren’t any conflicts, or after all conflicts have been resolved, you can perform a commit (e.g. by selecting Local|Commit in the menu) to finish the squash merge operation. On the commit dialog, you’ll get to choose whether you want to create a regular Merge commit or a Simple commit (“squash”). Select the latter option and enter a commit message, then click on the Commit button.
+
+Info
+Don’t be puzzled if the resulting Git commands (reported in the Output view) do not mention a –squash option. Before committing, SmartGit simply deletes .git/MERGE_HEAD to convert the scheduled merge to a simple commit.
+****
+Here are the commands that github produces automatically when a repo is created.
+git remote add origin git@github.com:dkfurrow/gitfuncs.git
+git branch -M main
+git push -u origin main
+
+Adding remotes and tags:
+from main menu, 'Remote' then 'add'
+Created tag  from branch menu ('add tag and push' didn't seem to work very well), but push did
